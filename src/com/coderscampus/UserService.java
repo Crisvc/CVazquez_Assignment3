@@ -1,5 +1,8 @@
 package com.coderscampus;
 
+
+
+
 public class UserService {
 
 	public User CreateUser (String username, String password, String name) {
@@ -9,4 +12,13 @@ public class UserService {
 		user.setName(name);
 		return user;
 	}
+
+
+
+
+
+
+
+
+
 }

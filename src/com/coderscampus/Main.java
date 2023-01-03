@@ -11,9 +11,13 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter Username:");
+		String username = input.next();
+		System.out.println("Please enter Password:");
 		
 		
-		
+	
 		
 		
 		UserService userService = new UserService();
