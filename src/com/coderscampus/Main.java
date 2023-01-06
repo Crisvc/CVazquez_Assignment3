@@ -11,14 +11,6 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		Scanner input = new Scanner(System.in);
-		System.out.println("Please enter Username:");
-		String username = input.next();
-		System.out.println("Please enter Password:");
-		
-		
-	
-		
 		
 		UserService userService = new UserService();
 		User [] users = new User[4];
@@ -36,12 +28,31 @@ public class Main {
 				
 				users[i] = userService.CreateUser(username, password, name);
 				i++;
-				System.out.println(values[0]);
+				
 				
 		}
 		
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter Username:");
+		String username = input.next();
+		System.out.println("Please enter Password:");
+		String password = input.next();
+		
+		for (User user : users) {
+			if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+				System.out.println("Welcome " + user.getName());
+				break;
+			}	else {
+				System.out.println("Invalid login. Please Try Again");
+				
+			}
+			{
+			
+			}
 		}
 			}
 
