@@ -13,14 +13,14 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		boolean success = false;
 		int attempt = 0;
-		while (attempt < 3) {
+		while (attempt < 5) {
 			System.out.println("Please enter Username:");
 			String username = scanner.next();
 			System.out.println("Please enter Password:");
 			String password = scanner.next();
 			
 			if (userVal (users, username, password) != true) {
-				if (attempt < 2) {
+				if (attempt < 4) {
 					System.out.println("Invalid Login, Please try again");					
 				}
 				attempt++; 
